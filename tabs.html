@@ -44,24 +44,34 @@
             .nav_main .nav_ch_l:hover{
                 background-color: blue;
             }
+            .nav_main [name=nav_ch]:checked + .nav_el
+            {
+                top: 3em;
+            }
             .nav_main #nav_ch1:checked ~ .nav_1,
             .nav_main #nav_ch2:checked ~ .nav_2,
             .nav_main #nav_ch3:checked ~ .nav_3
             {
                 top: 3em;
             }
+            .nav_main #nav_ch1:checked ~ .nav_menu #nav_la1,
+            .nav_main #nav_ch2:checked ~ .nav_menu #nav_la2,
+            .nav_main #nav_ch3:checked ~ .nav_menu #nav_la3
+            {
+                background-color: yellow;
+            }
         </style>
     </head>
     <body>
         <br />
         <div class="nav_main">
-                <input type="radio" name="nav_ch" id="nav_ch1" value="1" checked>
-                <input type="radio" name="nav_ch" id="nav_ch2" value="2">
-                <input type="radio" name="nav_ch" id="nav_ch3" value="3">
+            <input type="radio" name="nav_ch" id="nav_ch1" value="1" checked>
+            <input type="radio" name="nav_ch" id="nav_ch2" value="2">
+            <input type="radio" name="nav_ch" id="nav_ch3" value="3">
             <div class="nav_menu">
-                <label for="nav_ch1" class="nav_ch_l">tab 1</label>
-                <label for="nav_ch2" class="nav_ch_l">tab 2</label>
-                <label for="nav_ch3" class="nav_ch_l">tab 3</label>
+                <label for="nav_ch1" class="nav_ch_l" id="nav_la1">tab 1</label>
+                <label for="nav_ch2" class="nav_ch_l" id="nav_la2">tab 2</label>
+                <label for="nav_ch3" class="nav_ch_l" id="nav_la3">tab 3</label>
             </div>
             <div class="nav_el nav_1">
                 <p>
