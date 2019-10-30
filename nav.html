@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .nav_el{
+               display: none;
+            }
+            #nav_ch1:checked ~ .nav_1{
+                display: block;
+            }
+            #nav_ch2:checked ~ .nav_2{
+                display: block;
+            }
+            #nav_ch3:checked ~ .nav_3{
+                display: block;
+            }
+        </style>
+    </head>
+    <body> 
+        <div class="nav_main">
+            <input type="radio" name="nav_ch" id="nav_ch1" value="1" checked>
+            <input type="radio" name="nav_ch" id="nav_ch2" value="2">
+            <input type="radio" name="nav_ch" id="nav_ch3" value="3">
+            <div class="nav_el nav_1">1</div>
+            <div class="nav_el nav_2">2</div>
+            <div class="nav_el nav_3">3</div>
+        </div>
+    </body>
+</html>
