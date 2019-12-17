@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                transition: 1s;
+                box-sizing: border-box;
+            }
+            div.main{
+                width: 100%;
+                margin-left: 2em;
+                overflow: hidden;
+                margin: auto;
+                position: relative;
+                left: 0;
+                top:0;
+            }
+            div.menu ol{
+                position: fixed;
+                width: 10em;
+                top: 2em;;
+                height:100%;
+                height: calc(100% - 2em);
+                overflow:auto;
+                z-index: 6;
+                left: -10em;
+            }
+            .content{
+                width: 100%;
+                position: relative;
+                left: 0;
+            }
+            .menu:target ~ .content{
+                left: 10em;
+            }
+            div.menu:target ol{
+                left: 0em;
+                background: aliceblue;
+            } 
+            a[href="#"].mask{
+                position: fixed;
+                left:0;
+                top: 0;
+                background-color: #11111100;
+                width: 0;
+                height: 100%;
+            }
+            .menu:target ~ a[href="#"].mask{
+                z-index: 4;
+                width:100%;
+                background-color: #333333aa;
+                left: 0em;
+            }
+            .menu:target ~ label{
+                width:100%;
+                height:100%;
+                transition: width 0s ,height 0s, background-color 2s linear ;
+            }
+            .menu a[href="#menu"]{
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                padding: 0;
+            }
+            .menu a[href="#menu"] span{
+                background-color: black;
+                width: 1.8em;
+                height: 0.1em;
+                display: block;
+                margin: 0.4em 0.1em;
+            }
+            .menu:target a[href="#menu"]{
+                transform: rotate(-90deg);
+            }
+            div.content > p:first-child{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="menu" id="menu">
+                <a href="#menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <ol>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                    <li>blabla</li>
+                </ol>
+            </div>
+            <a href="#" class="mask"></a>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget felis sit amet tortor fermentum pellentesque at vitae mi. Nullam id purus et magna lacinia pellentesque. Ut ultrices at sapien at pellentesque. In vitae est non ligula euismod imperdiet. Maecenas nec luctus leo, nec tempor neque. Morbi elementum eu est pulvinar blandit. Nulla ullamcorper et metus vel laoreet. Morbi eu mi nec tortor hendrerit scelerisque vel non ex. Duis ultricies justo id orci ullamcorper semper. Etiam purus odio, convallis at purus et, volutpat consequat leo. Sed elit ex, scelerisque id lacus vitae, facilisis condimentum felis. Suspendisse rutrum felis ut libero auctor auctor. In eu lobortis sem. Maecenas sit amet nulla nec purus venenatis vestibulum.
+                </p>
+                <p>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam rutrum velit orci, non varius lacus efficitur vitae. Aliquam malesuada urna nec nibh ultrices luctus. Nam vel enim in ligula sollicitudin tempor non ut sapien. Praesent efficitur nibh non urna eleifend, lobortis finibus sem porttitor. Cras vehicula vulputate eros, quis euismod nisi aliquam et. Donec lobortis fringilla quam nec tempus.
+                </p>
+                <p>
+                    Praesent consequat at magna facilisis porta. Sed eu est augue. Donec varius, orci vel ornare eleifend, diam lacus consectetur nisi, sed dignissim est risus id nibh. Nunc quis consectetur sapien. Pellentesque lorem nibh, tincidunt ac ligula sed, fermentum tristique massa. Sed justo tellus, eleifend a nisi sed, tristique maximus eros. Aenean a blandit enim. Maecenas nec tempus ante.
+                </p>
+                <p>
+                    Ut fermentum ipsum ut ornare porttitor. Sed finibus urna at nisi ornare, id bibendum eros fermentum. Ut et nisl vel magna elementum rhoncus quis at ex. Vivamus tristique nisl odio, quis ullamcorper massa luctus ac. Ut ullamcorper vestibulum convallis. Vestibulum commodo condimentum blandit. Sed ut mollis lacus. Ut tincidunt, orci auctor hendrerit dapibus, elit diam accumsan felis, non blandit odio libero eget nisl. Nam est augue, hendrerit sed mi et, rhoncus euismod turpis. Aliquam ante diam, feugiat id elementum id, pharetra sed dui. Vivamus ac bibendum lacus.
+                </p>
+                <p>
+                    Nam a tellus feugiat, facilisis tortor eu, faucibus nunc. Vivamus commodo quis mi quis interdum. Vivamus eleifend diam vitae dictum vehicula. Duis nisi justo, lobortis sit amet nibh id, vulputate mollis ante. Praesent pharetra neque iaculis arcu elementum tempor. Vivamus quis dolor eu ligula luctus faucibus. Vivamus lacinia, turpis et egestas pellentesque, est nunc suscipit nisi, et rutrum urna diam quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean lobortis orci id mi iaculis finibus. Suspendisse potenti. Vivamus felis est, eleifend ut mattis non, dignissim non quam. Sed ut ornare lacus, eget tempus lacus. Praesent hendrerit varius est a maximus. Vestibulum nec pretium eros. Vivamus eget mollis nisl. 
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
